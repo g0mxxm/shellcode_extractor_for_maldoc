@@ -1,6 +1,6 @@
 The code in this repository which function is to extract the shellcode from the maldoc  
 # Introduction  
-In my daily analysis, I will face many maldoc. Most maldoc contain shellcode, so we have to face the problem of how to quickly extract shellcode from it and analyze its behavior. This tool solves this problem very well by combining existing analysis tools to form a tool chain. And if you want know more details of this tool, you can read this [article]() I wrote
+In my daily analysis, I will face many maldoc. Most maldoc contain shellcode, so we have to face the problem of how to quickly extract shellcode from it and analyze its behavior. This tool solves this problem very well by combining existing analysis tools to form a tool chain. And if you want know more details of this tool, you can read this [article](https://bbs.pediy.com/thread-275559.htm) I wrote
 # Install  
 ## Environment  
 * python3 & javascript  
