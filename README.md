@@ -4,7 +4,7 @@ In my daily analysis, I will face many maldoc. Most maldoc contain shellcode, so
 # Install  
 ## Environment  
 * python3 & javascript  
-* REMnux or any enviroment that include these tools (zipdump & rtfdump & xorsearch & scdbg & cut-bytes)   
+* REMnux or any enviroment that include these tools (zipdump & rtfdump & oledump & oleid & msoffcrypto-crack & xorsearch & scdbg & cut-bytes)   
 * Windows + Office + frida (If you want to use the hook function to extract the OLE object from the RTF file)  
 * The [docker image(g0mx/remnux-shellcode_extractor)](https://hub.docker.com/repository/registry-1.docker.io/g0mx/remnux-shellcode_extractor) created by myself for extracting shellcode from maldoc based on REMnux  
 ## Code  
