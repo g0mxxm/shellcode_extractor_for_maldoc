@@ -6,6 +6,7 @@ In my daily analysis, I will face many maldoc. Most maldoc contain shellcode, so
 * python3 & javascript  
 * REMnux or any enviroment that include these tools (zipdump & rtfdump & xorsearch & scdbg & cut-bytes)   
 * Windows + Office + frida (If you want to use the hook function to extract the OLE object from the RTF file)  
+* The [docker image(g0mx/remnux-shellcode_extractor)](https://hub.docker.com/repository/registry-1.docker.io/g0mx/remnux-shellcode_extractor) created by myself for extracting shellcode from maldoc based on REMnux  
 ## Code  
 You only need to clone this repository  
 # Usage 
@@ -13,18 +14,21 @@ You only need to clone this repository
 ### Environment
 Windows + Office + frida  
 ### Code
-in the hook folder (you need modify the storage location of the OLE object which is dumped from RTF)
+In the hook folder (you need modify the storage location of the OLE object which is dumped from RTF)
 ### Bash 
 ```bash
 python3 "$(The path of hook.py)" -n "$(The path of WINWORD.exe) $(The path of RTF file)" "$(The path of hook_OLE.mjs)"
 ```
 ## Shellcode extractor  
 ### Environment
-REMnux or any enviroment that include these tools (zipdump & rtfdump & xorsearch & scdbg & cut-bytes)
+REMnux or any enviroment that include these tools (zipdump & rtfdump & xorsearch & scdbg & cut-bytes) or The [docker image(g0mx/remnux-shellcode_extractor)](https://hub.docker.com/repository/registry-1.docker.io/g0mx/remnux-shellcode_extractor) created by myself for extracting shellcode from maldoc based on REMnux
 ### Code  
 shellcode_extractor.py (you need to make sure that the tool path in the python file matches the environment you are using. At the same time you can modify the storage location of the shellcode file which is dumped from maldoc) 
 ### Bash  
+If you use the docker images(g0mx/remnux-shellcode_extractor), you will find the shellcode_extractor.py in the "/home/remnux"  
 ```bash
+docker run --rm -it -u remnux -v "$(The path of folder)":/home/remnux/files remnux/remnux-shellcode_extractor /bin/bash  
+cd /home/remnux  
 python3 "$(The path of shellcode_extractor.py)"
 ```  
 # Examples  
